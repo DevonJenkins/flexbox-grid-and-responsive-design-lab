@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: gray;
+  background-color: rgb(78, 99, 89);
 /* Use a system font, if none are available use an available sans-sarif   font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -26,23 +26,27 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 50px;
+  align-items: center;
+  min-height: 100vh;
 }
 main{
-  margin: 3px;
+  
   background: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  text-align: center;
-  
+  text-align:center;
+  height: 50vh;
+  width:75%;
   
 }
-
 #status{
-  display: flex;
-  justify-content: right;
-
+ 
+  text-align: right;
+  color: gray;
+  font-weight: bold;
 }
+
+
 
 img{
   
@@ -51,5 +55,38 @@ img{
   border-radius: 25px;
   border: 2px rgb(5, 195, 5) solid;
 }
+#brand{
+  display: none;
+}
+#contact{
+  display:flex; 
+  justify-content: center;
+  background: green;
+  align-items: center;
+  height:60px;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  
+  
+}
 
+
+
+#contact > p {
+  height: 60px;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#contact > p:first-child {
+  background-color: lime;
+}
+
+#contact > p:last-child {
+  background-color: green;
+}
 
