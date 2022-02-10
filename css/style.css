@@ -29,6 +29,9 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+h1{
+  font-size: 3vh;
+}
 main{
   
   background: rgb(255, 255, 255);
@@ -36,7 +39,7 @@ main{
   flex-direction: column;
   text-align:center;
   height: 50vh;
-  width:75%;
+  width:60%;
   
 }
 #status{
@@ -44,7 +47,12 @@ main{
   text-align: right;
   color: gray;
   font-weight: bold;
+  padding: 1vh;
+  
 }
+
+
+
 
 
 
@@ -52,7 +60,7 @@ img{
   
   margin: 0 auto;
   max-width: 10vh;
-  border-radius: 25px;
+  border-radius: 50%;
   border: 2px rgb(5, 195, 5) solid;
 }
 #brand{
@@ -63,8 +71,8 @@ img{
   justify-content: center;
   background: green;
   align-items: center;
-  height:60px;
-  width: 60%;
+  height:75%;
+  width: 100%;
   text-align: center;
   margin: 0 auto;
   
@@ -75,7 +83,7 @@ img{
 
 #contact > p {
   height: 60px;
-  width: 75%;
+  width:50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,9 +92,70 @@ img{
 
 #contact > p:first-child {
   background-color: lime;
+  height:100%;
 }
 
 #contact > p:last-child {
   background-color: green;
 }
 
+
+@media only screen and (min-width: 768px){
+main{
+  height: 300px;
+  width: 500px;
+display: grid;
+grid-template-rows: auto auto auto auto ;
+
+grid-template-areas: "status name"
+"image occupation"
+"contact offer";
+margin:0;
+padding:0;
+
+}
+#name{
+  grid-area:name;
+  padding: 0px;
+}
+#occupation{
+  grid-area: occupation;
+  margin:0px;
+}
+
+#status{
+  grid-area: status;
+  text-align: left;
+}
+#brand{
+  display: inline;
+  grid-column: 2/3;
+}
+#offer{
+  grid-area:offer;
+  grid-row: 4/5;
+}
+
+#offer,#occupation,#brand,#name{
+  background: rgb(213, 213, 213);
+  height: 100%;
+  padding-left: 20px;
+}
+
+img{
+  grid-area: image;
+  
+  
+}
+
+#contact{
+
+  margin:0;
+  height:100%;
+  grid-column: 1/2;
+  width:100%;
+  font-size:3vh;
+}
+
+
+}
